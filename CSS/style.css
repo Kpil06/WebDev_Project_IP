@@ -29,6 +29,12 @@
       color: #00B6D8;
     }
 
+    @media only screen and (max-width: 600px) {
+      div{
+        background-color: blue;
+      }
+    }
+
     header {
       display: flex;
       justify-content: flex-end;
