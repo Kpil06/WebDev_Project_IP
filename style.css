@@ -1,88 +1,209 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Link Example</title>
-  <style>
+/* Universal Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;}
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* Body Styling */
+body {
+  color: #EDF0F1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+}
 
-    body {
-      background-color: #24252A;
-      color: #EDF0F1;
-      font-family: "Montserrat", sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-    }
+/* Background images for different pages */
+body.home {
+  background-image: url(".jpg");
+  background-color: #24252A;
+}
 
-
-
-    a {
-      color: #0088A9;
-    }
-
-    a:hover {
-      color: #00B6D8;
-    }
-
-    @media only screen and (max-width: 600px) {
-      div{
-        background-color: blue;
-      }
-    }
-
-    header {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 30px 10%;
-    }
-
-    .logo {
-      cursor: pointer;
-    }
-
-    .nav_links {
-      list-style: none;
-    }
-
-    nav .links {
-      display: inline-block;
-      padding: 0px 20px;
-    }
-
-    .nav_links li a {
-      transition: all 0.3s ease 0s;
-    }
-
-    .nav_links li a:hover {
-      color: #0088A9;
-    }
-
-    button {
-      padding: 9px 25px;
-      background-color: rgba(0, 136, 169, 0.8);
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease 0s;
-    }
+body.about {
+  background-image: url("future-supercars.jpg");
+  background-blend-mode: overlay;
+}
 
 
+body.contact {
+  background-image: url("contact.jpg");
+  background-color: #24252A;
+}
+/* Events Page */
+body.events {
+  background-color: #1D1F21;
+}
 
-    button:hover {
-      background-color: rgba(0, 136, 169, 1);
-    }
-  </style>
-</head>
-<body>
-  <h1>Main Content</h1>
-  <p>This is an example page.</p>
+/* Shared Background Styling */
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
 
-  <a href="https://www.example.com">Visit Example</a>
-</body>
-</html>
+/* Definition List Styling */
+dl {
+  font-size: 18px; /* General font size for the list */
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent white overlay for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  color: #EDF0F1; /* Light font color for contrast against a black background */
+}
+
+dt {
+  font-size: 20px; /* Larger font size for titles */
+  font-weight: bold;
+  color: sandybrown; /* Highlight the titles in orange */
+  margin-bottom: 10px;
+}
+
+dd {
+  font-size: 18px; /* Slightly smaller than titles */
+  margin-left: 20px; /* Indentation for descriptions */
+  margin-bottom: 15px; /* Spacing between entries */
+}
+
+
+/* Navigation Styling */
+nav {
+  background-color: #F1DEB3;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+}
+
+.nav_links li {
+  margin: 0 20px;
+}
+
+.nav_links li a {
+  color: black;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav_links li a:hover {
+  color: #00B6D8;
+}
+
+/* Page Title Styling */
+.page-title {
+  text-align: center;
+  margin-top: 50px;
+  color: black;
+}
+
+/* Content Box Styling */
+.content-box {
+  background-color: peachpuff;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Gallery Styling */
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.item {
+  text-align: center;
+  margin: 10px;
+}
+
+.item img {
+  max-width: 200px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Button Styling */
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 0.8);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 1);
+}
+
+/* Contact Info List */
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.contact-info li {
+  margin: 5px 0;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    height: auto;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .nav_links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav_links li {
+    margin: 10px 0;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item img {
+    max-width: 100%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .page-title {
+    font-size: 1.5em;
+    margin: 20px 0;
+  }
+
+  button {
+    padding: 7px 20px;
+  }
+ 
+}
