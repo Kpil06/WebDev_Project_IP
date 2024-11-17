@@ -4,113 +4,43 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
-    <style>
-        
-        nav {
-            background-color: #F1DEB3;
-            height: 60px;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 30px;
-            overflow: hidden;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-
-        nav ul li {
-            position: relative;
-            margin-right: 20px;
-            padding: 5px 10px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li:hover a {
-            color: #FF6700;
-        }
-
-        nav ul li::before {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: #FF6700;
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        nav ul li:hover::before {
-            transform: scaleX(1);
-        }
-
-      
-        .gallery {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px;
-            flex-wrap: wrap;
-            
-        }
-
-        .item {
-            text-align: center;
-            margin: 10px;
-        }
-
-        img {
-            max-width: 200px;
-            
-            height: auto;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-        }
-    </style>
+    <title>Events</title>
+    <link href="style.css" rel="stylesheet" type="text/css"> 
 </head>
 
-<body>
+<body class="events">
     <nav>
-        <ul>
+        <ul class="nav_links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="events.html">Events</a></li>
         </ul>
     </nav>
-    <h1 style="text-align: center;">Upcoming Events &         Special Offers</h1> 
 
-    <p><h2><strong>Special Offers</strong></h2>Some         special offers on cars in my personal collections, click <a href="https://www.donedeal.ie/cars"> here</a> here to view the offers. </p>
+    <h1 >Upcoming Events & Special Offers</h1>
 
-     <p><h2><strong>Events</strong></h2>Some special events that will be held in Ireland over the coming months, key dates wil listed below.</p>
+    <p>
+        <h2>Special Offers</h2>
+        Some special offers on cars in my personal collections, click 
+        <a href="https://www.donedeal.ie/cars" target="_blank">here</a> to view the offers.
+    </p>
 
-    <dl>  
-      <dt><strong>20/12/2024</strong></dt>  
-       <dd>Christmas Car show, located at Kildare Village.</dd>  
-      <dt><strong>05/01/2025</strong></dt>  
-       <dd>New Years Car meet up, located at dundrum shopping centre.</dd>
-        <dt><strong>22/06/2025</strong></dt>  
-           <dd>Summer Car auction, located at Bray Beach.</dd>  
-          <dt><strong>28/10/2025</strong></dt>  
-           <dd>Halloween Car show for Charity, locatedat Lexlip Village.</dd>
-    </dl> 
-    
+    <p>
+        <h2>Events</h2>
+        Some special events that will be held in Ireland over the coming months, key dates are listed below:
+    </p>
+
+    <dl>
+        <dt>20/12/2024</dt>
+        <dd>Christmas Car Show, located at Kildare Village.</dd>
+        <dt>05/01/2025</dt>
+        <dd>New Year's Car Meetup, located at Dundrum Shopping Centre.</dd>
+        <dt>22/06/2025</dt>
+        <dd>Summer Car Auction, located at Bray Beach.</dd>
+        <dt>28/10/2025</dt>
+        <dd>Halloween Car Show for Charity, located at Leixlip Village.</dd>
+    </dl>
 </body>
 
 </html>
