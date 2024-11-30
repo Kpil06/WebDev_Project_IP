@@ -1,30 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-</head>
-<body class="contact">
-    <nav>
-        <ul class="nav_links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-             <li><a href="events.html">Events</a></li>
-        </ul>
-    </nav>
+   <title>Contact</title>
+  <style>
+    /* Styling for the navigation bar */
+    nav {
+      background-color: #F1DEB3;
+      height: 60px;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      overflow: hidden; 
+    }
 
-    <h1 class="page-title">Contact Us</h1>
-    <div class="content-box">
-        <p>If you have any questions, feedback, or inquiries, feel free to reach out to us using the contact information below:</p>
-        <ul class="contact-info">
-            <li>Email: Beast@info.com</li>
-            <li>Phone: +1234</li>
-            <li>Address: 123 Main Street, City, Country</li>
-        </ul>
-        <p>We look forward to hearing from you!</p>
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    nav ul li {
+      position: relative;
+      margin-right: 20px;
+      padding: 5px 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white; /* Changed to white */
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li:hover a {
+      color: #FF6700; /* Orange on hover */
+    }
+
+    nav ul li::before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #FF6700;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    nav ul li:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* Additional styling for content */
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    p {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="events.html">Events</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="inquiry">Reason for inquiry</label>
+      </div>
+      <div class="col-75">
+        <select id="inquiry" name="inquiry">
+          <option value="gen">General</option>
+          <option value="fb">Feedback</option>
+          <option value="ts">Technical support</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="message">Message</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <br>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+      <div class="row">
+        <div class="col-25">
+      <form action="/action_page.php">
+        <label for="email">Enter your email:</label>
+        </div>
+        <div class="col-75">
+        <input type="email" id="email" name="email" placeholder="john@example.com" pattern=".+@tudublin\.ie">
+        <input type="submit" value="Submit">
+    </div>
+    </form>
+  </div>
 </body>
 </html>
