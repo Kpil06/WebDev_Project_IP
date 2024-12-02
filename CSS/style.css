@@ -18,16 +18,36 @@ body {
 }
 
 /* Background images for different pages */
+
 body.home {
-  background-image: url(".jpg");
   background-color: #24252A;
 }
+
+/* Gallery Styling */
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.item {
+  text-align: center;
+  margin: 10px;
+}
+
+.item img {
+  max-width: 200px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
 
 body.about {
   background-image: url("future-supercars.jpg");
   background-blend-mode: overlay;
 }
-
 
 body.contact {
   background-image: url("contact.jpg");
@@ -48,28 +68,27 @@ body {
 
 /* Definition List Styling */
 dl {
-  font-size: 18px; /* General font size for the list */
+  font-size: 18px;
   margin: 20px auto;
   max-width: 600px;
-  background-color: rgba(255, 255, 255, 0.1); /* Transparent white overlay for contrast */
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
-  color: #EDF0F1; /* Light font color for contrast against a black background */
+  color: #EDF0F1;
 }
 
 dt {
-  font-size: 20px; /* Larger font size for titles */
+  font-size: 20px;
   font-weight: bold;
-  color: sandybrown; /* Highlight the titles in orange */
+  color: black;
   margin-bottom: 10px;
 }
 
 dd {
-  font-size: 18px; /* Slightly smaller than titles */
-  margin-left: 20px; /* Indentation for descriptions */
-  margin-bottom: 15px; /* Spacing between entries */
+  font-size: 18px;
+  margin-left: 20px;
+  margin-bottom: 15px;
 }
-
 
 /* Navigation Styling */
 nav {
@@ -118,26 +137,6 @@ nav {
   text-align: center;
 }
 
-/* Gallery Styling */
-.gallery {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px;
-  flex-wrap: wrap;
-}
-
-.item {
-  text-align: center;
-  margin: 10px;
-}
-
-.item img {
-  max-width: 200px;
-  height: auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
 /* Button Styling */
 button {
   padding: 9px 25px;
@@ -164,98 +163,123 @@ button:hover {
   margin: 5px 0;
 }
 
-/* Mobile Responsive Design */
+/* Contact Page Specific Styles */
+body.contact {
+  background-image: url("contact.jpg");
+  background-color: #24252A;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Contact Page Form Container */
+.contact .form-container {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  width: 90%;
+  margin: 120px auto; /* Centers the form */
+  color: #F1DEB3;
+  box-sizing: border-box;
+}
+
+/* Contact Form Layout */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Group for Each Input Field */
+.contact .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.contact input,
+.contact select,
+.contact textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #aaa;
+}
+
+/* Button Styling */
+.contact button {
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #FF6700;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact button:hover {
+  background-color: #e65a00;
+  transform: scale(1.05);
+}
+
+/* Page Title Styling for Contact Page */
+.contact .page-title {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 36px;
+  color: #F1DEB3;
+}
+
+/* Layout Adjustments for Larger Screens */
+@media (min-width: 768px) {
+  .contact .form-container {
+    width: 60%; /* Adjust width of the form for larger screens */
+    margin: 100px auto; /* Keep it centered */
+    padding: 50px; /* Increase padding for a more spacious look */
+  }
+
+  .contact .page-title {
+    font-size: 48px; /* Make title larger on bigger screens */
+    margin-top: 80px;
+  }
+}
+
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
-  nav {
-    height: auto;
-    padding: 10px;
-    flex-direction: column;
+  .contact .form-container {
+    padding: 30px;
+    width: 90%; /* Ensure form is wide enough on smaller screens */
   }
 
-  .nav_links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav_links li {
-    margin: 10px 0;
-  }
-
-  .gallery {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .item img {
-    max-width: 100%;
-    width: 80%;
+  .contact .page-title {
+    font-size: 28px;
   }
 }
 
 @media (max-width: 480px) {
-  body {
-    font-size: 14px;
+  .contact .page-title {
+    font-size: 24px;
   }
 
-  .page-title {
-    font-size: 1.5em;
-    margin: 20px 0;
-  }
-
-  button {
-    padding: 7px 20px;
-  }
- 
-}
-* {
-  box-sizing: border-box;
-}
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-}
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
+  .contact .form-container {
+    padding: 20px;
   }
 }
