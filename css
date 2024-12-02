@@ -1,0 +1,285 @@
+/* Universal Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+/* Body Styling */
+body {
+  color: #EDF0F1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Background images for different pages */
+
+body.home {
+  background-color: #24252A;
+}
+
+/* Gallery Styling */
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.item {
+  text-align: center;
+  margin: 10px;
+}
+
+.item img {
+  max-width: 200px;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+
+body.about {
+  background-image: url("future-supercars.jpg");
+  background-blend-mode: overlay;
+}
+
+body.contact {
+  background-image: url("contact.jpg");
+  background-color: #24252A;
+}
+/* Events Page */
+body.events {
+  background-color: #1D1F21;
+}
+
+/* Shared Background Styling */
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Definition List Styling */
+dl {
+  font-size: 18px;
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  color: #EDF0F1;
+}
+
+dt {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+dd {
+  font-size: 18px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+/* Navigation Styling */
+nav {
+  background-color: #F1DEB3;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+}
+
+.nav_links li {
+  margin: 0 20px;
+}
+
+.nav_links li a {
+  color: black;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav_links li a:hover {
+  color: #00B6D8;
+}
+
+/* Page Title Styling */
+.page-title {
+  text-align: center;
+  margin-top: 50px;
+  color: black;
+}
+
+/* Content Box Styling */
+.content-box {
+  background-color: peachpuff;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Button Styling */
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 0.8);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 1);
+}
+
+/* Contact Info List */
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.contact-info li {
+  margin: 5px 0;
+}
+
+/* Contact Page Specific Styles */
+body.contact {
+  background-image: url("contact.jpg");
+  background-color: #24252A;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Contact Page Form Container */
+.contact .form-container {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  width: 90%;
+  margin: 120px auto; /* Centers the form */
+  color: #F1DEB3;
+  box-sizing: border-box;
+}
+
+/* Contact Form Layout */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Group for Each Input Field */
+.contact .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.contact input,
+.contact select,
+.contact textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #aaa;
+}
+
+/* Button Styling */
+.contact button {
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #FF6700;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact button:hover {
+  background-color: #e65a00;
+  transform: scale(1.05);
+}
+
+/* Page Title Styling for Contact Page */
+.contact .page-title {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 36px;
+  color: #F1DEB3;
+}
+
+/* Layout Adjustments for Larger Screens */
+@media (min-width: 768px) {
+  .contact .form-container {
+    width: 60%; /* Adjust width of the form for larger screens */
+    margin: 100px auto; /* Keep it centered */
+    padding: 50px; /* Increase padding for a more spacious look */
+  }
+
+  .contact .page-title {
+    font-size: 48px; /* Make title larger on bigger screens */
+    margin-top: 80px;
+  }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .contact .form-container {
+    padding: 30px;
+    width: 90%; /* Ensure form is wide enough on smaller screens */
+  }
+
+  .contact .page-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact .page-title {
+    font-size: 24px;
+  }
+
+  .contact .form-container {
+    padding: 20px;
+  }
+}
